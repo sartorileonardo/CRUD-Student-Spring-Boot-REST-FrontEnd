@@ -1,0 +1,20 @@
+
+<div *ngIf="student">
+  <div>
+    <label>Name: </label> {{student.name}}
+  </div>
+  <div>
+    <label>Email: </label> {{student.email}}
+  </div>
+  <div>
+    <label>Active: </label> {{student.active}}
+  </div>
+ 
+  <span *ngIf='student.active' (click)='updateActive(false)'>Inactive</span>
+ 
+  <span *ngIf='!student.active' (click)='updateActive(true)'>Active</span>
+ 
+  <span (click)='deleteStudent()'>Delete</span>
+ 
+  <hr/>
+</div>

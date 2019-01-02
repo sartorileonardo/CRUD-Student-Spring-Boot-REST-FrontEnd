@@ -1,0 +1,10 @@
+
+<h1>Students</h1>
+ 
+<div *ngFor="let student of students" style="width: 300px;">
+  <student-details [student]='student'></student-details>
+</div>
+ 
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteStudents()'>Delete All</button>
+</div>
